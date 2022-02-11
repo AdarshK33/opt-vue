@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  nuxt:
+    build: ./courses/
+    container_name: fdc-student-ui-website
+    restart: always
+    ports:
+      - "4444:4444"
+    command:
+      "npm run start"
+
+ # nginx:
+ #   image: nginx:1.14
+ #   container_name: adopt-ui-nginx
+ #   ports:
+ #     - "80:80"
+ #   volumes:
+ #     - ./nginx:/etc/nginx/conf.d
+ #   depends_on:
+ #     - nuxt

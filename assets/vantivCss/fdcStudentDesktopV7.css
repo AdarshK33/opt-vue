@@ -1,0 +1,232 @@
+/* CSS for Payment Gateway Integration thru Vantiv */
+
+body {
+    margin: 0;
+    padding: 0 5px;
+    font-family:"ProximaNova", "Arial", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    line-height:1.4;
+}
+
+.positionNumberDiv {
+	padding-bottom: 7px;
+	padding-top: 8px;
+}
+
+.positionNumberDiv label, 
+.positionExpDateDiv label, 
+.positionCvvDiv label, 
+.positionNumberDiv label *, 
+.positionExpDateDiv label *, 
+.positionCvvDiv label *{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    position: absolute;
+}
+span#cvvLabelText {
+	content: "CVV";
+}
+.positionExpDateDiv,
+.positionCvvDiv {
+  display: inline-block;
+}
+.positionCvvDiv {
+  margin-left: 15px;
+  padding: 6px 0 0;
+  vertical-align: top;
+  width: 30%;
+}
+#accountNumber, #cvv {
+  border: 0;
+  border-bottom: 1px solid #666;
+  border-radius: 0;
+  font-size: 14px;
+  padding: 0.46rem 0.55rem;
+  color: #666;
+  height: 18px;
+  width: calc(100% - 1.1rem);
+  font-style: normal;
+  margin-bottom: 6px;
+}
+#cvv { 
+  width: 35%;
+}
+.fa-lg {
+  display: none;
+}
+#expSelectDiv {
+  padding: 6px 0 0;
+  font-style: normal;
+  min-width: 14.285%;
+  position: relative;
+}
+#expMonthDiv, #expYearDiv {
+	margin-right: 20px;
+	position: relative;
+	display: inline-block;
+}
+#expYearDiv {
+	margin-right: 0;
+}
+select, option {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-style: normal;
+  border: 0;
+  border-bottom: 1px solid #666;
+  padding: 4px 20px 3px 3px !important;
+  font-size: 14px;
+  color: #666;
+  border-radius: 0;
+}
+select::-ms-expand {
+	display: none;
+}
+#expMonthDiv::before, #expYearDiv::before {
+	content: "\25BC";
+	position: absolute;
+	top: 9px;
+	right: 4px;
+	bottom: 0;
+	padding: 0;
+	background-color: #fff;
+	font-size: 11px;
+	color: #333;
+	font-stretch: unset;
+	height: 13px;
+	width: 11px;
+	z-index: 0;
+}
+#expMonth, #expYear {
+  width: 97px;
+  height: 33px;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  margin-bottom: 6px;
+}
+.tooltip {
+  display: inline-block;
+  font-size: 14px;
+  font-family: FontAwesome;
+}
+.tooltip::before {
+  content: "\f059";
+  text-decoration: none;
+  position: absolute;
+  margin-left: -22px;
+  margin-top: -16px;
+  color: #00274C;
+  font-size: 14px;
+}
+#tooltipText { display: none; }
+input[type="tel"]::-webkit-input-placeholder, 
+input[type="tel"]::-moz-placeholder, 
+input[type="tel"]:-moz-placeholder, 
+input[type="tel"]:-ms-input-placeholder, 
+input[type="tel"]::placeholder {
+  color: #666;
+  opacity: 0.9;
+}
+input:focus, select:focus {
+	box-shadow: 0px 0px 0px 0.2rem rgba(0, 123, 255, 0.25);
+	outline: 0;
+}
+#expMonthDiv,
+#expDividerDiv,
+#expYearDiv {
+    display: inline-block;
+}
+
+#expDividerText{
+      display:none;
+}
+#cvvTooltipTitle {
+    position: absolute;
+    background-color: #f2f2f2;
+    border: 1px solid #aaa;
+    padding: 6px;
+    width: 330px;
+	margin-left: -316px; 
+	margin-top: -54px;
+    font-size: 12px;
+	z-index: 1;
+}
+
+/* input[type="text"].valid,
+select.valid{border-color:green} */
+
+/* #accountNumberLabelText.valid:after,
+#expDateLabelText.valid:after,
+#cvvLabelText.valid:after { 
+    font-family:FontAwesome;
+    content:"\f058";
+    color:green;
+    padding-left:.5em
+} */
+#accountNumberLabelText.invalid:after,
+#expDateLabelText.invalid:after,
+#cvvLabelText.invalid:after { 
+    font-family:FontAwesome;
+    content:"\f057";
+    color:#dc3545;
+    padding-left:.5em
+}
+label.valid:after{
+    font-family:FontAwesome;
+    content:"\f058";
+    padding-left:.5em;
+    color:green
+}
+label.invalid:after{
+    font-family:FontAwesome;
+    content:"\f057";
+    padding-left:.5em;
+    color:#dc3545}
+.numberDiv:after,
+.expDateDiv:after,
+.cvvDiv:after{
+    font-size:.8em;
+    font-weight:normal;
+    line-height:1em;
+    display:block }
+.numberDiv.error-871:after{
+    font-size: 12px;
+    content:"Please check your credit card number and enter it again.";
+    color:#dc3545 }
+.numberDiv.error-872:after{ 
+    font-size: 12px;
+    content:"Card number too short.";
+    color:#dc3545 }
+.numberDiv.error-873:after{
+    font-size: 12px;
+    content:"Card number too long"; 
+    color:#dc3545}
+.numberDiv.error-874:after{
+    font-size: 12px;
+    content:"Card number not numeric.";
+    color:#dc3545 }
+.numberDiv.error-876:after{ 
+    font-size: 12px;
+    content:"Card number invalid.";
+    color:#dc3545 }
+.cvvDiv.error-881:after{
+    font-size: 12px;
+    content:"Card validation number not numeric.";
+    color:#dc3545 }
+.cvvDiv.error-882:after{
+    font-size: 12px;
+    content:"Card validation number too short";
+    color:#dc3545}
+.cvvDiv.error-883:after{
+    font-size: 12px;
+    content:"Card validation number too long.";
+    color:#dc3545 }
+.expDateDiv.error-886.invalid::after {
+	font-size: 12px;
+	content: "Select valid month and expiry year";
+	color: #dc3545;
+}
