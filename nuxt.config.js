@@ -10,14 +10,14 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    titleTemplate: 'First Day School - %s', // Adopt | %s
+    titleTemplate: 'First Day School %s', // Adopt | %s
     htmlAttrs: {
       lang: 'en',
       locale: 'en-US'
     },
     script: [
-      { src: '/courses/js/jquery.min.js' },
-      { src: '/courses/js/bootstrap.js' },
+      { src: '/js/jquery.min.js' },
+      { src: '/js/bootstrap.js' },
       { src: process.env.VANTIV_URL }
     ],
     meta: [

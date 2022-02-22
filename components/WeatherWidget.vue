@@ -49,11 +49,9 @@ export default {
     storeNo(newVal) {
       this.storeNo = newVal
       this.getCurrentWeather()
-      // console.log(newVal, 'NEW STORE NO in weather')
     },
     zip(newVal) {
       this.zipcode = newVal;
-      console.log(newVal, this.zipcode, "WEATHER WIDGET+++++ZIP CHANGE")
       this.getCurrentWeather();
     }
     
@@ -67,7 +65,6 @@ export default {
         termCode: this.termCode,
         termYear: this.termYear
       }
-      console.log(this.zipcode, 'ZIPCODE to WEATHER API')
 
       let _this = this
       await this.$apis.baseService

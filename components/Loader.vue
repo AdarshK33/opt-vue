@@ -2,6 +2,7 @@
   <div class="showLoader">
     <div class="loader" style="display:block!important"></div>
   </div>
+
 </template>
 <script>
 export default {
@@ -29,12 +30,13 @@ export default {
   }
 }
 
+
 .showLoader {
   display: flex;
   justify-content: center;
-  margin-top: 16px;
+  margin-top: 22%;
 }
-.loaderr {
+.loader {
   border: 8px solid #fff;
   border-radius: 50%;
   border-top: 8px solid #3c799a;

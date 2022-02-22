@@ -4,11 +4,10 @@ import Constants from '~/utils/constants.js'
 let qs = require('qs')
 export const auth = async context => {
   let cookie = getCookie('user', context)
-  // console.log('auth middleare')
+
   cookie = cookie ? (!process.server ? cookie : cookie.user) : ''
 
   if (cookie) {
-    // console.log(cookie, "cookie")
     let user = cookie ? JSON.parse(cookie) : {}
     const isActiveRefreshToken = await refreshTokenCall(context, user) //isActiveRefreshToken
     // const isActiveRefreshToken = true;

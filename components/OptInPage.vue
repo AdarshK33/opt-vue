@@ -21,7 +21,7 @@ export default {
   },
   head() {
     return {
-      title: 'Opt In'
+      title: '- Opt In'
     }
   },
   mounted() {},

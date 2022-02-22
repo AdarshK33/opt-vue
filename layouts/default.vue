@@ -10,10 +10,15 @@
       <hr />
       <Header :userInf="userInfo" :tenantP="tenantDetails" />
       <hr />
+      <div>
+        <nuxt />
+        <div id="mainFooter">
+          <Footer :storeDets="storeDetails" />
+        </div>
+      </div>
     </div>
-    <nuxt />
-    <div id="mainFooter">
-      <Footer :storeDets="storeDetails" />
+    <div v-else>
+      <Loader />
     </div>
   </div>
 </template>
@@ -22,15 +27,16 @@
 import TopHeader from '~/components/TopHeader'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
+import Loader from '~/components/Loader'
 import { setCookie, getCookie } from '../cookies.js'
-import $ from 'jquery'
 
 export default {
   middleware: 'auth',
   components: {
     TopHeader,
     Header,
-    Footer
+    Footer,
+    Loader
   },
   data() {
     return {
@@ -68,15 +74,15 @@ export default {
   },
   async mounted() {},
   watch: {
+    reqId(newVal) {
+      this.reqId = newVal
+    },
     storeNumber(newVal) {
       this.storeNumber = newVal
       this.fetchStoreDetails()
     },
     zip(newVal) {
       this.zip = newVal
-    },
-    reqId(newVal) {
-      this.reqId = newVal
     }
   },
 
@@ -149,7 +155,7 @@ export default {
       await this.$apis.baseService
         .getTenantDetails(params)
         .then(res => {
-          this.tenantDetails = res.data;
+          this.tenantDetails = res.data
         })
         .catch(err => {
           console.log(err, 'ERROR FROM TENANT DETAILS')
