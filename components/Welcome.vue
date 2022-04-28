@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid" style="padding:0 !important">
+  <div class="container-fluid" style="padding: 0 !important">
     <div id="mainContent">
       <div v-if="optInPg">
         <OptInPage />
@@ -14,24 +14,24 @@
 <script>
 import fontawesome from '@fortawesome/fontawesome-free'
 import OptInPage from './OptInPage'
-import OptOutPage from './OptOutPage'
+import OptOutPage from './OptoutPage/OptOutPage'
 
 export default {
   name: 'Welcome',
   components: {
     OptInPage,
-    OptOutPage
+    OptOutPage,
   },
   data() {
     return {
-      optInPg: false
+      optInPg: false,
     }
   },
   watch: {},
   created() {},
   mounted() {},
   methods: {},
-  computed: {}
+  computed: {},
 }
 </script>
 
