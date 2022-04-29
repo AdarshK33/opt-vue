@@ -18,7 +18,7 @@ module.exports = {
     script: [
       { src: '/js/jquery.min.js' },
       { src: '/js/bootstrap.js' },
-      { src: process.env.VANTIV_URL }
+    
     ],
     meta: [
       { charset: 'utf-8' },
