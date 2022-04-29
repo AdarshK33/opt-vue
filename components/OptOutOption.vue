@@ -11,14 +11,12 @@
       <p>
         Opt out for:
 
-        <select
-          class="custom-select custom-select-medium termSelectionDropDown"
-          id="terms"
-          v-model="selectedTerm"
-          @change="changeSelectedTermModal()"
-        >
-          <option>Spring 2021</option>
-        </select>
+        <select name="Spring" id="spring" class="spring_dropdown">
+            <option value="one"> <u>Spring 2022 </u></option>
+            <option value="two"> <u>Spring 2022 </u></option>
+            <option value="three"> <u>Spring 2022 </u></option>
+            <option value="four"> <u>Spring 2022 </u></option>
+          </select>
       </p>
     </div>
 
@@ -52,5 +50,13 @@ export default {
 <style scoped>
 .custom-select {
   width: auto;
+}
+.spring_dropdown {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00274c;
+  border-color: white;
+  border-bottom: 1px solid black;
+  font-family: 'ProximaNovaBold';
 }
 </style>

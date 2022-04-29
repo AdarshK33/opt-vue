@@ -1,42 +1,63 @@
 <template>
-    <div class="content">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="optin_header_card">
-              <h3>What your fellow students are saying about the program:</h3>
-            </div>
-            <div class="string_quote_img">
-              <img
-                alt="b&amp;n college"
-                src="~/assets/images/quote.png"
-             
-              />
-            </div>
-            <div class="quote_menu">
-              <img
-                src="~/assets/images/71statcrowd.png"
-                alt="statcrowd_img"
-                style="
-                  max-height: 300px;
-                  width: 250px;
-                  height: auto;
-                  margin-left: 15px;
-                "
-              />
+  <div class="container mid_menu">
+    <div class="row menu_list">
+      <div class="col-sm-9">
+        <h4>
+          Did You know? Through this Program, your required course materials are
+        </h4>
 
-              <P>
-                It's very helpful that the program selects the matrerial I need
-                for my classes and provides extra suggestions that might be
-                helpful.Receiving my books was a simple and easy process too !"
-              </P>
-            
-            </div>
+        <ul class="featureList fa-ul">
+          <li>
+            <i class="fa-li fa fa-check"></i>Offered at a discounted rate (
+            students are saving between 35-40% every term )
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>Included as a flat course fee or
+            charge as part of your education costs
+          </li>
+          <li>
+            <i class="fa-li fa fa-check"></i>Conveniently prepared for you
+            before the first day of class
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+       <!--  <img src="../assets/images/u22.png" class="img-fluid mid-menu-img" >-->
+      </div>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="optin_header_card">
+            <h3>What your fellow students are saying about the program:</h3>
+          </div>
+          <div class="string_quote_img">
+            <img alt="b&amp;n college" src="~/assets/images/quote.png" class="img-fluid"  />
+          </div>
+          <div class="quote_menu">
+            <img class="img-fluid" 
+              src="~/assets/images/71statcrowd.png"
+              alt="statcrowd_img"
+              style="
+                max-height: 300px;
+                width: 250px;
+                height: auto;
+                margin-left: 15px;
+              "
+            />
+             <P>
+              It's very helpful that the program selects the matrerial I need
+              for my classes and provides extra suggestions that might be
+              helpful. Receiving my books was a simple and easy process too !"
+            </P>
           </div>
         </div>
-     </div>
+      </div>
+    </div>
+  </div>
 </template>
 
-<script>  
+<script>
 // import <import name> from 'import location'
 
 export default {
@@ -47,9 +68,7 @@ export default {
   props: [],
 
   data() {
-    return {
-     
-    }
+    return {}
   },
   head() {
     return {
@@ -62,7 +81,6 @@ export default {
 }
 </script>
 <style scoped>
-
 .content {
   margin-top: 30px;
   width: 100%;
@@ -79,8 +97,8 @@ export default {
 .mid_menu {
   margin-top: 30px;
 }
-.mid_menu .menu_list{
-padding-left: 15px;
+.mid_menu .menu_list {
+  padding-left: 15px;
 }
 .optin_header_card h3 {
   padding-top: 20px;
@@ -110,4 +128,11 @@ padding-left: 15px;
   position: absolute;
   top: 85px;
 }
+.mid-menu-img
+{
+    position: relative;
+    bottom: 77px;
+
+}
+
 </style>
