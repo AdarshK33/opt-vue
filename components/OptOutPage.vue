@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss">
 .mainContent{
- height: 400px
+//  height: 400px
 }
 
 </style>

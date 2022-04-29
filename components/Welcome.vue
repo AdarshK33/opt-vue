@@ -13,7 +13,7 @@
 
 <script>
 import fontawesome from '@fortawesome/fontawesome-free'
-import OptInPage from './OptInPage'
+import OptInPage from './OptInPage/OptInPage.vue'
 import OptOutPage from './OptOutPage'
 
 export default {
@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      optInPg: false
+      optInPg: true
     }
   },
   watch: {},
