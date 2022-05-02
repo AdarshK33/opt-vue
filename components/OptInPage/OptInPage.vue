@@ -5,7 +5,7 @@
         <h2>Welcome back!</h2>
       </div>
       <div class="profile_name">
-        <h5>Would you like to opt in to [profile name] ?</h5>
+        <h5>Would you like to opt in to [profile name]?</h5>
       </div>
       <div class="optin_dropdown">
         <h5>
@@ -23,8 +23,9 @@
         <button class="button btn_optin" type="button">OPT IN</button>
       </div>
     </div>
-    <div class="container mid_menu">
-      <div class="menu_list">
+ <!-- common card -->
+    <div class="container common_card mid_menu">
+       <div class="menu_list">
         <h4>
           Did you know? through this program,your required course materials are
         </h4>
@@ -42,38 +43,34 @@
           first day of class
         </h5>
       </div>
-
-      <div class="content">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="optin_header_card">
-              <h3>What your fellow students are saying about the program:</h3>
-            </div>
-            <div class="string_quote_img">
-              <img alt="b&amp;n college" src="~/assets/images/quote.png" />
-            </div>
-            <div class="quote_menu">
-              <img
-                src="~/assets/images/71statcrowd.png"
-                alt="statcrowd_img"
-                style="
-                  max-height: 300px;
-                  width: 250px;
-                  height: auto;
-                  margin-left: 15px;
-                "
-              />
-
-              <P>
-                It's very helpful that the program selects the matrerial I need
-                for my classes and provides extra suggestions that might be
-                helpful.Receiving my books was a simple and easy process too !"
-              </P>
-            </div>
-          </div>
+   <div class="content">
+    <div class="d-flex bd-highlight">
+      <div class="p-2 w-100 bd-highlight">
+        <div class="optin_header_card">
+          <h3>What your fellow students are saying about the program:</h3>
+        </div>
+        <div class="string_quote_img">
+          <img alt="b&amp;n college" src="~/assets/images/quote.png" />
+        </div>
+        <P class="card_p">
+          It's very helpful that the program selects the matrerial I need for my
+          classes and provides extra suggestions that might be helpful.Receiving
+          my books was a simple and easy process too !"
+        </P>
+      </div>
+      <div class="p-2 flex-shrink-1 bd-highlight">
+        <div class="quote_menu">
+          <img
+            src="~/assets/images/71statcrowd.png"
+            alt="statcrowd_img"
+             
+          />
         </div>
       </div>
     </div>
+    </div>
+    </div>
+    <!-- common opt out -->
     <div class="container last_menu">
       <div class="welcome_back opt_out">
         <h4>Do you want opt out?</h4>
@@ -150,23 +147,16 @@ export default {
   margin: auto;
   color: #d14f00;
   font-family: 'ProximaNovaMedium';
-  font-weight: 400;
+  font-weight: 500;
   font-size: 20px;
   text-align: center;
 }
 .optin_dropdown {
   margin-top: 20px;
 }
-
 .optin_dropdown h5 {
   text-align: center;
 }
-// .optin_dropdown .dropdown .btn-outline-secondary {
-//   font-size: 16px;
-//   font-weight: 700;
-//   color: #00274c;
-//   border-color: white;
-// }
 .spring_dropdown {
   font-size: 16px;
   font-weight: 700;
@@ -186,6 +176,7 @@ export default {
   color: white;
   background-color: #00274c;
   border-radius: 7px;
+   font-family: 'ProximaNova';
 }
 .mid_menu {
   margin-top: 30px;
@@ -197,7 +188,7 @@ export default {
   color: black;
   font-size: 16px;
   font-weight: 600;
-  font-family: 'ProximaNova';
+  font-family: 'ProximaNovaMedium';
 }
 .menu_list h5 {
   color: black;
@@ -205,17 +196,6 @@ export default {
 
   font-family: 'ProximaNova';
 }
-
-// .content {
-//     width: 100%;
-//     height: 700px;
-//     // position: relative;
-//     border-radius: 10px;
-//     transition: 1s;
-
-//     padding: 30px;
-//     background-color: #FFFFFF;
-// }
 
 .content {
   margin-top: 30px;
@@ -240,13 +220,13 @@ export default {
 .quote_menu img {
   padding-top: 10px;
   float: right;
-  left: 5px;
+  left: 13px;
   max-height: 300px;
   width: 250px;
   height: auto;
   margin-left: 15px;
   position: relative;
-  bottom: 134px;
+  bottom: 25px;
 }
 .quote_menu p {
   text-align: justify;
@@ -260,6 +240,14 @@ export default {
   font-family: 'ProximaNovaBold';
   text-align: center;
   font-size: 16px;
+}
+.card_p{
+     position: relative;
+    max-width: 650px;
+    bottom: 28px;
+    left: 108px;
+    left: 85px;
+
 }
 .means h4 {
   font-size: 16px;
@@ -275,6 +263,10 @@ export default {
  
 }
 .last_menu{
-   margin-top: 25px;
+  //  margin-top: 25px;
 }
+
+
+   
+
 </style>
