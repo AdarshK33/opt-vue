@@ -69,54 +69,6 @@ $sub-font: 'ProximaNova', sans-serif;
 
 //---------start Ritu --------------------
 
-.optOutPage {
-  min-height: 55px;
-  h4 {
-    font-size: 1.3em;
-    font-family: $main-font-bold;
-    word-break: break-word;
-    color: $primary-color;
-    
-  }
-  h5 {
-    font-size: 1.0em;
-    font-family: $main-font-bold;
-    word-break: break-word;
-    color: $primary-color;
-   
-  }
-  h6 {
-    font-size: 0.9em;
-    font-family: $main-font-bold;
-    word-break: break-word;
-    color: $primary-color;
-    
-  }
-  .mt-40 {
-      margin-top:40px;
-  }  
-  button {
-    background-color: $blue-button-color;
-    font-style: normal;
-    font-family: $main-font-bold;
-    border-radius: 4px;
-    height: 35px;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 1.75em;
-    text-transform: uppercase;
-    padding: 5px 2em;
-    font-size: 12px;
-    border: none;
-    font-weight: 600;
-    display: inline-block;
-    cursor: pointer;
-    transition: 0.3s;
-    width:220px;
-  }
-
-}
 
 //-----------end-------------------------
 .op07{

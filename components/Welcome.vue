@@ -5,7 +5,7 @@
         <OptInPage />
       </div>
       <div v-else>
-        <OptOutPage />
+        <!--<OptOutPage />-->
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
 <script>
 import fontawesome from '@fortawesome/fontawesome-free'
 import OptInPage from './OptInPage'
-import OptOutPage from './OptoutPage/OptOutPage'
+//import OptOutPage from './OptoutPage/OptOutPage'
 
 export default {
   name: 'Welcome',
