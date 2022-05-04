@@ -11,11 +11,11 @@ import { getCookie } from '../cookies.js'
 
 export default {
   components: {
-    Welcome
+    Welcome,
   },
   head() {
     return {
-      title: 'Course List'
+      title: 'Course List',
     }
   },
   data() {
@@ -31,7 +31,7 @@ export default {
   },
 
   mounted() {
-    window.onbeforeunload = function() {
+    window.onbeforeunload = function () {
       return true
     }
     if (document.documentMode) {
@@ -43,6 +43,6 @@ export default {
   },
 
   methods: {},
-  computed: {}
+  computed: {},
 }
 </script>
