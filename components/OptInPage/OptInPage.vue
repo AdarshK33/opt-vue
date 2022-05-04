@@ -25,86 +25,68 @@
     </div>
  <!-- common card -->
     <div class="container common_card mid_menu">
-       <div class="menu_list">
-        <h4>
-          Did you know? through this program,your required course materials are
-        </h4>
-        <h5>
-          <i class="fa fa-check"></i>
-          Offered at a discounted rate (students are saving between 35-50% every
-          term)
-        </h5>
-        <h5>
-          <i class="fa fa-check"></i> Included as a flat course fee or charge as
-          part of your education costs
-        </h5>
-        <h5>
-          <i class="fa fa-check"></i> Conveninently prepared for you before the
-          first day of class
-        </h5>
-      </div>
-   <div class="content">
-    <div class="d-flex bd-highlight">
-      <div class="p-2 w-100 bd-highlight">
-        <div class="optin_header_card">
-          <h3>What your fellow students are saying about the program:</h3>
-        </div>
-        <div class="string_quote_img">
-          <img alt="b&amp;n college" src="~/assets/images/quote.png" />
-        </div>
-        <P class="card_p">
-          It's very helpful that the program selects the matrerial I need for my
-          classes and provides extra suggestions that might be helpful.Receiving
-          my books was a simple and easy process too !"
-        </P>
-      </div>
-      <div class="p-2 flex-shrink-1 bd-highlight">
-        <div class="quote_menu">
-          <img
-            src="~/assets/images/71statcrowd.png"
-            alt="statcrowd_img"
-             
-          />
-        </div>
-      </div>
+  
+        <div class="menu_list">
+          <h4>
+            Did you know? through this program,your required course materials
+            are
+          </h4>
+          <h5>
+            <i class="fa fa-check"></i>
+            Offered at a discounted rate (students are saving between 35-50%
+            every term)
+          </h5>
+          <h5>
+            <i class="fa fa-check"></i> Included as a flat course fee or charge
+            as part of your education costs
+          </h5>
+          <h5>
+            <i class="fa fa-check"></i> Conveninently prepared for you before
+            the first day of class
+          </h5>
+     
+     
     </div>
+    <div class="content">
+      <div class="d-flex bd-highlight">
+        <div class="p-2 w-100 bd-highlight">
+          <div class="optin_header_card">
+            <h3>What your fellow students are saying about the program:</h3>
+          </div>
+          <div class="string_quote_img">
+            <img alt="b&amp;n college" src="~/assets/images/quote.png" />
+          </div>
+          <P class="card_p">
+            It's very helpful that the program selects the matrerial I need for
+            my classes and provides extra suggestions that might be
+            helpful.Receiving my books was a simple and easy process too !"
+          </P>
+        </div>
+        <div class="p-2 flex-shrink-1 bd-highlight">
+          <div class="quote_menu">
+            <img src="~/assets/images/card-stat.png" alt="statcrowd_img" />
+          </div>
+        </div>
+      </div>
     </div>
     </div>
     <!-- common opt out -->
     <div class="container last_menu">
-      <div class="welcome_back opt_out">
-        <h4>Do you want opt out?</h4>
-      </div>
-      <div class="profile_name opt_out means">
-        <h4>
-          Out out means you will be responsible for getting required course
-          materials on your own before class.
-        </h4>
-      </div>
-      <div class="optin_dropdown opt_out">
-        <h5>
-          Opt out for:
-          <select name="Spring_out" id="spring_out" class="spring_dropdown">
-            <option value="one">Spring 2022</option>
-            <option value="two">Spring 2022</option>
-            <option value="three">Spring 2022</option>
-            <option value="four">Spring 2022</option>
-          </select>
-        </h5>
-      </div>
-      <div class="button_optin">
-        <button class="button btn_optin" type="button">OPT OUT</button>
-      </div>
+     <OptOutOption />
     </div>
   </div>
 </template>
 <script>
+import OptOutOption from '../CommonComponents/OptOutOption.vue'
+import CommonCard from '../CommonComponents/CommonCard.vue'
+
 //import <import name> from 'import location'
 
 export default {
   name: 'OptInPage',
   components: {
-    //button
+    OptOutOption,
+    CommonCard
   },
   props: [],
 
@@ -172,11 +154,24 @@ export default {
   text-align: center;
 }
 .btn_optin {
-  padding: 8px 90px;
-  color: white;
-  background-color: #00274c;
-  border-radius: 7px;
-   font-family: 'ProximaNova';
+ background-color: #00274c;
+    font-style: normal;
+    font-family:  'ProximaNova';
+    border-radius: 4px;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.75em;
+    padding: 5px 2em;
+    font-size: 14px;
+    border: none;
+    font-weight: 400;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s;
+    width:220px;
+    text-transform: uppercase;
 }
 .mid_menu {
   margin-top: 30px;
@@ -219,14 +214,16 @@ export default {
 }
 .quote_menu img {
   padding-top: 10px;
-  float: right;
-  left: 13px;
-  max-height: 300px;
-  width: 250px;
-  height: auto;
-  margin-left: 15px;
-  position: relative;
-  bottom: 25px;
+    float: right;
+    left: 8px;
+    max-height: 300px;
+    width: 238px;
+    height: auto;
+    margin-left: 15px;
+    position: relative;
+    bottom: 19px;
+    border-top-right-radius: 29px;
+    border-bottom-right-radius: 20px;
 }
 .quote_menu p {
   text-align: justify;
@@ -263,7 +260,9 @@ export default {
  
 }
 .last_menu{
-  //  margin-top: 25px;
+    margin-top: 30px;
+  margin-bottom: 30px;
+
 }
 
 
