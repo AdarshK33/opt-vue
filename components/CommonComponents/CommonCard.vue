@@ -1,5 +1,7 @@
 <template>
    <div class="container common_card mid_menu">
+     <div class="d-flex bd-highlight">
+      <div class="p-2 w-100 bd-highlight">
        <div class="menu_list">
         <h4>
           Did you know? through this program,your required course materials are
@@ -18,6 +20,15 @@
           first day of class
         </h5>
       </div>
+    </div>
+    <div class="p-2 flex-shrink-1 bd-highlight opt-out-stat">
+      <img
+            src="~/assets/images/opt-out-stat.png"
+            alt="opt-out-stat" 
+             
+          /> 
+    </div>
+  </div>
    <div class="content">
     <div class="d-flex bd-highlight">
       <div class="p-2 w-100 bd-highlight">
@@ -36,7 +47,7 @@
       <div class="p-2 flex-shrink-1 bd-highlight">
         <div class="quote_menu">
           <img
-            src="~/assets/images/71statcrowd.png"
+            src="~/assets/images/card-stat.png"
             alt="statcrowd_img"
              
           />
@@ -72,9 +83,8 @@ export default {
 </script>
 <style scoped>
 .content {
-  margin-top: 30px;
   width: 100%;
-  height: 227px;
+  height: 228px;
   border-radius: 20px;
   -webkit-transition: 1s;
   transition: 1s;
@@ -83,6 +93,8 @@ export default {
   background-color: #ffffff;
   margin-bottom: 20px;
   display: block;
+  bottom: 25px;
+  position:relative;
 }
 .mid_menu {
   margin-top: 30px;
@@ -116,14 +128,16 @@ export default {
 }
 .quote_menu img {
   padding-top: 10px;
-  float: right;
-  left: 13px;
-  max-height: 300px;
-  width: 250px;
-  height: auto;
-  margin-left: 15px;
-  position: relative;
-  bottom: 20px;
+    float: right;
+    left: 13px;
+    max-height: 300px;
+    width: 249px;
+    height: auto;
+    margin-left: 15px;
+    position: relative;
+    bottom: 18px;
+    border-top-right-radius: 29px;
+    border-bottom-right-radius: 20px;
 }
 .quote_menu p {
   text-align: justify;
@@ -149,5 +163,18 @@ export default {
     left: 108px;
     left: 85px;
 
+}
+.opt-out-stat img
+{
+      /* padding-top: 10px; */
+    /* float: left; */
+    /* left: 13px; */
+    max-height: 300px;
+    width: 157px;
+    height: auto;
+    /* margin-left: -121px; */
+    position: relative;
+    bottom: 38px;
+    margin-right: 41px;
 }
 </style>

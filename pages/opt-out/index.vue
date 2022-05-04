@@ -2,7 +2,7 @@
   <div class="row mainContainer">
     <div class="container optOutPage">
       <h1 class="contentHeader">Welcome to [Program Name]!</h1>
-      <CommonCard />
+        <CommonCard />
        
         <ViewMaterial />
         <OptOutOption />

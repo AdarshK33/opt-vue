@@ -1,5 +1,5 @@
 <template>
-  <div class="vieMaterial  mt-40">
+  <div class="vieMaterial  mt-30">
     <div class="view_menu">
     <h3>
       Ready to view your courses and included materials?
