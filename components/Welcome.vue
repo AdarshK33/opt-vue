@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid" style="padding:0 !important">
+  <div class="container-fluid" style="padding: 0 !important">
     <div id="mainContent">
       <div v-if="optInPg">
         <OptInPage />
       </div>
       <div v-else>
-        <OptOutPage />
+        <!--<OptOutPage />-->
       </div>
     </div>
   </div>
@@ -13,14 +13,14 @@
 
 <script>
 import fontawesome from '@fortawesome/fontawesome-free'
-import OptInPage from './OptInPage/OptInPage.vue'
-import OptOutPage from './OptOutPage'
+import OptInPage from './OptInPage'
+//import OptOutPage from './OptoutPage/OptOutPage'
 
 export default {
   name: 'Welcome',
   components: {
     OptInPage,
-    OptOutPage
+    OptOutPage,
   },
   data() {
     return {
@@ -31,7 +31,7 @@ export default {
   created() {},
   mounted() {},
   methods: {},
-  computed: {}
+  computed: {},
 }
 </script>
 
