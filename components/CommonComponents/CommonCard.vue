@@ -25,7 +25,7 @@
       <img
             src="~/assets/images/opt-out-stat.png"
             alt="opt-out-stat" 
-             
+            :style="{ display: $route.path === '/opt-in' ? 'none' : 'block' }"
           /> 
     </div>
   </div>

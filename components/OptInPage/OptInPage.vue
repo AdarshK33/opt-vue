@@ -20,56 +20,11 @@
         </h5>
       </div>
       <div class="button_optin">
-        <button class="button btn_optin" type="button">OPT IN</button>
+        <button class="button btn_optin" type="button" id="btnOptIn">OPT IN</button>
       </div>
     </div>
  <!-- common card -->
-    <div class="container common_card mid_menu">
-  
-        <div class="menu_list">
-          <h4>
-            Did you know? through this program,your required course materials
-            are
-          </h4>
-          <h5>
-            <i class="fa fa-check"></i>
-            Offered at a discounted rate (students are saving between 35-50%
-            every term)
-          </h5>
-          <h5>
-            <i class="fa fa-check"></i> Included as a flat course fee or charge
-            as part of your education costs
-          </h5>
-          <h5>
-            <i class="fa fa-check"></i> Conveninently prepared for you before
-            the first day of class
-          </h5>
-     
-     
-    </div>
-    <div class="content">
-      <div class="d-flex bd-highlight">
-        <div class="p-2 w-100 bd-highlight">
-          <div class="optin_header_card">
-            <h3>What your fellow students are saying about the program:</h3>
-          </div>
-          <div class="string_quote_img">
-            <img alt="b&amp;n college" src="~/assets/images/quote.png" />
-          </div>
-          <P class="card_p">
-            It's very helpful that the program selects the matrerial I need for
-            my classes and provides extra suggestions that might be
-            helpful.Receiving my books was a simple and easy process too !"
-          </P>
-        </div>
-        <div class="p-2 flex-shrink-1 bd-highlight">
-          <div class="quote_menu">
-            <img src="~/assets/images/card-stat.png" alt="statcrowd_img" />
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
+   <CommonCard />
     <!-- common opt out -->
     <div class="container last_menu">
      <OptOutOption />
@@ -100,9 +55,7 @@ export default {
       title: '- Opt In',
     }
   },
-  mounted() {},
-  watch: {},
-  methods: {},
+  
 }
 </script>
 
@@ -260,7 +213,7 @@ export default {
  
 }
 .last_menu{
-    margin-top: 30px;
+  
   margin-bottom: 30px;
 
 }
