@@ -17,11 +17,6 @@ export default {
     
     }
   },
-  watch: {},
-  created() {},
-  mounted() {},
-  methods: {},
-  computed: {}
 }
 </script>
 

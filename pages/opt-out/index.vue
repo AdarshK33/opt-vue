@@ -36,9 +36,7 @@ export default {
       title: '- Opt Out',
     }
   },
-  mounted() {},
-  watch: {},
-  methods: {},
+
 }
 </script>
 
