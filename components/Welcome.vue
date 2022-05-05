@@ -13,18 +13,18 @@
 
 <script>
 import fontawesome from '@fortawesome/fontawesome-free'
-import OptInPage from './OptInPage'
+import OptInPage from './OptInPage/OptInPage.vue'
 //import OptOutPage from './OptoutPage/OptOutPage'
 
 export default {
   name: 'Welcome',
   components: {
     OptInPage,
-    OptOutPage,
+    // OptOutPage,
   },
   data() {
     return {
-      optInPg: false,
+      optInPg: true
     }
   },
   watch: {},

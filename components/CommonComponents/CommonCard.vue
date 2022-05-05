@@ -25,7 +25,7 @@
       <img
             src="~/assets/images/opt-out-stat.png"
             alt="opt-out-stat" 
-             
+            :style="{ display: $route.path === '/opt-out' ? 'block' : 'none' }"
           /> 
     </div>
   </div>
@@ -76,9 +76,7 @@ export default {
       title: '',
     }
   },
-  mounted() {},
-  watch: {},
-  methods: {},
+
 }
 </script>
 <style scoped>

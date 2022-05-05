@@ -32,9 +32,7 @@ export default {
       title: '',
     }
   },
-  mounted() {},
-  watch: {},
-  methods: {},
+
 }
 </script>
 <style >
