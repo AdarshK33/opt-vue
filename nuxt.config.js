@@ -15,18 +15,14 @@ module.exports = {
       lang: 'en',
       locale: 'en-US'
     },
-    script: [
-      { src: '/js/jquery.min.js' },
-      { src: '/js/bootstrap.js' },
-    
-    ],
+    script: [{ src: '/js/jquery.min.js' }, { src: '/js/bootstrap.js' }],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_version || ''
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.png' }]
@@ -49,12 +45,10 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    { src: '~/plugins/vuelidate' },
     { src: '~/plugins/axios' },
-    { src: '~/plugins/baseApi' },
-    { src: '~/plugins/localStorage.js', ssr: false },
-    { src: '~/plugins/dataLayer.js', ssr: false, async: false }
-    // { src: '~/plugins/vuex-persist', ssr: false }
+    { src: '~/plugins/baseApi' }
+    // { src: '~/plugins/localStorage.js', ssr: false }
+    // { src: '~/plugins/dataLayer.js', ssr: false, async: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -85,19 +79,13 @@ module.exports = {
   },
   env: {
     DEPLOY_ENV: DEPLOY_ENV,
-    API_STUDENT: process.env.API_STUDENT,
-    API_URL_BASE: process.env.API_URL_BASE,
-    API_AUTH: process.env.API_AUTH,
-    API_STUDENT_SSR: process.env.API_STUDENT_SSR,
-    VANTIV_URL: process.env.VANTIV_URL,
-    VANTIV_PAYPAGEID: process.env.VANTIV_PAYPAGEID,
     SECRET_KEY: process.env.SECRET_KEY,
+    API_STUDENT: process.env.API_STUDENT,
+    API_STUDENT_SSR: process.env.API_STUDENT_SSR,
     API_OAUTH: process.env.API_OAUTH,
-    API_URL_CATALOG: process.env.API_URL_CATALOG,
-    API_URL_COMM: process.env.API_URL_COMM,
-    API_URL_INSIGHTS: process.env.API_URL_INSIGHTS,
-    WEATHER_API_KEY: process.env.WEATHER_API_KEY,
-    API_OAUTH_SSR: process.env.API_OAUTH_SSR
+    API_OAUTH_SSR: process.env.API_OAUTH_SSR,
+    API_AUTH: process.env.API_AUTH,
+    API_OPTOUT: process.env.API_OPTOUT
   },
   /*
    ** Build configuration

@@ -17,10 +17,14 @@ const Constants = Object.freeze({
       service: 'api/oauth'
     },
     authService: {
-      instance: "API_AUTH",
-      service: "api/users"
+      instance: 'API_AUTH',
+      service: 'api/users'
     },
+    optoutService: {
+      instance: 'API_OPTOUT',
+      service: 'api/fdc-opt-out'
+    }
   }
 })
 
-export default Constants;
+export default Constants

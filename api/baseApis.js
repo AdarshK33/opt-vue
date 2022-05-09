@@ -5,11 +5,13 @@ const studentInstance = process.server
   : Constants.apiServices.studentService.instance
 const authInstance = Constants.apiServices.authService.instance
 
+const optoutInstance = Constants.apiServices.optoutService.instance
+
 export default $axios => ({
   //GENERIC
   getUserDetails(headers) {
     return $axios({
-      url_instance: studentInstance,
+      url_instance: optoutInstance,
       method: 'post',
       url_suffix: `/getUser`,
       headers: headers
@@ -18,24 +20,16 @@ export default $axios => ({
 
   getTenantDetails(params) {
     return $axios({
-      url_instance: studentInstance,
+      url_instance: optoutInstance,
       method: 'post',
       url_suffix: `/getTenantDetails`,
-      data: params
-    })
-  },
-  getActiveTerms(params) {
-    return $axios({
-      url_instance: studentInstance,
-      method: 'post',
-      url_suffix: `/getActiveTerms`,
       data: params
     })
   },
 
   getStoreDetails(params) {
     return $axios({
-      url_instance: studentInstance,
+      url_instance: optoutInstance,
       method: 'post',
       url_suffix: '/getStoreDetails',
       data: params
@@ -58,6 +52,16 @@ export default $axios => ({
       url_instance: authInstance,
       method: 'post',
       url_suffix: '/un/fdc/authenticate',
+      data: params
+    })
+  },
+
+  //OPT OUT SERVICE
+  getActiveTerms(params) {
+    return $axios({
+      url_instance: optoutInstance,
+      method: 'post',
+      url_suffix: `/getActiveTerms`,
       data: params
     })
   }
