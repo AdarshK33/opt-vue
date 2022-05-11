@@ -23,6 +23,9 @@ const getUrlPrefix = instance => {
     case apiServices.ssrOAuthService.instance:
       service = apiServices.ssrOAuthService.service
       break
+    case apiServices.optoutService.instance:
+      service = apiServices.optoutService.service
+      break
     default:
       service = ''
   }

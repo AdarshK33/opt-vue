@@ -32,8 +32,6 @@
         :zip="zipcode"
         :reqId="reqId"
         :storeNo="storeNumber"
-        :termCode="termCode"
-        :termYear="termYear"
         :selectedCampus="selectedCampus"
       />
     </div>
@@ -49,33 +47,26 @@ export default {
     return {
       showLoader: true,
       selectedCampus: {},
-      campusInfo: {},
       storeData: {},
-      termCode: '',
-      termYear: '',
       storeNumber: '',
-      zipcode: this.zipC,
-      reqId: this.requestId
+      zipcode: this.zipC
     }
   },
   props: {
-    requestId: {
-      type: String,
-      required: false
-    },
     zipC: {
       type: String,
       required: false
+    },
+    campusInfo: {
+      type: Array,
+      required: true
     }
   },
   components: {
     WeatherWidget
   },
-  created() {},
-  beforeMount: function() {
-    this.fetchActiveTerms()
-  },
   mounted() {
+    console.log(this.campusInfo)
     if (this.campusInfo !== undefined) {
       this.selectedCampus = this.campusInfo[0]
     }
@@ -84,38 +75,12 @@ export default {
     storeNumber(newVal) {
       this.storeNumber = newVal
     },
-    termCode(newVal) {
-      this.termCode = newVal
-    },
-    termYear(newVal) {
-      this.termYear = newVal
-    },
     zipC(newVal) {
       this.zipcode = newVal
     }
   },
 
   methods: {
-    async fetchActiveTerms() {
-      let params = {
-        requestId: this.requestId
-      }
-
-      await this.$apis.baseService
-        .getActiveTerms(params)
-        .then(async res => {
-          this.campusInfo = res.data.terms[0].campuses
-          this.selectedCampus = res.data.terms[0].campuses[0]
-          this.storeData = res.data.terms[0]
-          this.termCode = res.data.terms[0].termCode
-          this.termYear = res.data.terms[0].termYear
-          this.storeNumber = res.data.terms[0].campuses[0].storeNumber
-        })
-        .catch(err => {
-          console.log(err, 'ActiveTerms ERROR')
-        })
-    },
-
     async handleUserCampus(campus) {
       this.storeNumber = campus.storeNumber
       this.$emit('campusChanged', campus)

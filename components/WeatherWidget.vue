@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { setCookie, getCookie } from '../cookies.js';
+import { setCookie, getCookie } from '../cookies.js'
 
 export default {
   name: 'WeatherWidget',
@@ -29,7 +29,7 @@ export default {
     return {
       zipcode: this.zip,
       realReq: 'reqIdnew',
-      weatherResponse: {},
+      weatherResponse: {}
     }
   },
   props: [
@@ -37,44 +37,38 @@ export default {
     'zip',
     'reqId',
     'storeNo',
-    'termCode',
-    'termYear',
     'selectedCampus',
     'storeDetails',
     'selectedTerm'
   ],
   created() {},
   mounted() {},
-    watch: {
+  watch: {
     storeNo(newVal) {
       this.storeNo = newVal
       this.getCurrentWeather()
     },
     zip(newVal) {
-      this.zipcode = newVal;
-      this.getCurrentWeather();
+      this.zipcode = newVal
+      this.getCurrentWeather()
     }
-    
   },
   methods: {
     async getCurrentWeather() {
       const params = {
         zip: this.zipcode,
         requestId: this.reqId,
-        storeNumber: this.storeNo,
-        termCode: this.termCode,
-        termYear: this.termYear
+        storeNumber: this.storeNo
       }
 
-      let _this = this
       await this.$apis.baseService
         .getCurrentWeather(params)
-        .then(function(response) {
-          _this.weatherResponse = { ...response.data }
+        .then(response => {
+          this.weatherResponse = { ...response.data }
         })
         .catch(errors => {})
     }
-  },
+  }
 }
 </script>
 

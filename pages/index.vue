@@ -6,16 +6,15 @@
 
 <script>
 import Welcome from '~/components/Welcome.vue'
-import JWT from 'jsonwebtoken'
 import { getCookie } from '../cookies.js'
 
 export default {
   components: {
-    Welcome,
+    Welcome
   },
   head() {
     return {
-      title: 'Course List',
+      title: 'Course List'
     }
   },
   data() {
@@ -23,26 +22,16 @@ export default {
   },
   watch: {},
   created() {
-    let emailId = ''
     var cookie = getCookie('user')
     if (!cookie) {
       this.$router.push('/unauthorized')
     }
   },
 
-  mounted() {
-    window.onbeforeunload = function () {
-      return true
-    }
+  async mounted() {
     if (document.documentMode) {
       this.$router.push('/unsupportedBrowser')
     }
-  },
-  beforeDestroy() {
-    window.onbeforeunload = null
-  },
-
-  methods: {},
-  computed: {},
+  }
 }
 </script>

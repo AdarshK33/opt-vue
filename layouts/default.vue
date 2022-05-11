@@ -5,6 +5,7 @@
         :zipC="zip"
         :requestId="reqId"
         :storeNo="storeNumber"
+        :campusInfo="campusDetails"
         @campusChanged="newCampusSelected"
       />
       <hr />
@@ -28,7 +29,7 @@ import TopHeader from '~/components/TopHeader'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import Loader from '~/components/Loader'
-import { setCookie, getCookie } from '../cookies.js'
+import { getCookie } from '../cookies.js'
 
 export default {
   middleware: 'auth',
@@ -57,7 +58,7 @@ export default {
     await this.fetchUserDetails()
     await this.fetchTenantDetails()
     await this.fetchActiveTerms()
-    await this.fetchStoreDetails()
+    // await this.fetchStoreDetails()
     await this.fetchingDone()
 
     var cookie = getCookie('user')
@@ -115,10 +116,11 @@ export default {
       await this.$apis.baseService
         .getActiveTerms(params)
         .then(async res => {
-          this.termCode = res.data.terms[0].termCode
-          this.termYear = res.data.terms[0].termYear
-          this.campusDetails = res.data.terms[0].campuses
-          this.storeNumber = res.data.terms[0].campuses.storeNumber
+          console.log(res)
+          // this.termCode = res.data.terms[0].termCode
+          // this.termYear = res.data.terms[0].termYear
+          // this.campusDetails = res.data.campuses
+          // this.storeNumber = res.data.terms[0].campuses.storeNumber
         })
         .catch(err => {
           console.log(err, 'ActiveTerms ERROR')
