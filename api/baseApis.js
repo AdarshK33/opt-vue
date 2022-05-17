@@ -38,7 +38,7 @@ export default $axios => ({
 
   getCurrentWeather(params) {
     return $axios({
-      url_instance: studentInstance,
+      url_instance: optoutInstance,
       method: 'post',
       url_suffix: '/getCurrentWeather',
       data: params

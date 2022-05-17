@@ -42,7 +42,7 @@ export default {
     'selectedTerm'
   ],
   created() {},
-  mounted() {},
+  mounted() {this.getCurrentWeather()},
   watch: {
     storeNo(newVal) {
       this.storeNo = newVal
@@ -58,7 +58,7 @@ export default {
       const params = {
         zip: this.zipcode,
         requestId: this.reqId,
-        storeNumber: this.storeNo
+        storeNumber:this.storeNo
       }
 
       await this.$apis.baseService

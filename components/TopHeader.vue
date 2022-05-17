@@ -49,17 +49,22 @@ export default {
       selectedCampus: {},
       storeData: {},
       storeNumber: '',
-      zipcode: this.zipC
+      zipcode: this.zipC,
+      reqId:this.requestId
     }
   },
   props: {
     zipC: {
-      type: String,
+      type: Number,
       required: false
     },
     campusInfo: {
       type: Array,
       required: true
+    },
+    requestId:{
+      type:String,
+      required:true
     }
   },
   components: {

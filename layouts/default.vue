@@ -58,7 +58,7 @@ export default {
     await this.fetchUserDetails()
     await this.fetchTenantDetails()
     await this.fetchActiveTerms()
-    // await this.fetchStoreDetails()
+     await this.fetchStoreDetails()
     await this.fetchingDone()
 
     var cookie = getCookie('user')
@@ -119,7 +119,7 @@ export default {
           console.log(res)
           // this.termCode = res.data.terms[0].termCode
           // this.termYear = res.data.terms[0].termYear
-          // this.campusDetails = res.data.campuses
+              this.campusDetails = res.data.campuses
           // this.storeNumber = res.data.terms[0].campuses.storeNumber
         })
         .catch(err => {
