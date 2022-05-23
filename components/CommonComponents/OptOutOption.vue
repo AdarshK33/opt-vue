@@ -1,5 +1,8 @@
 <template>
-  <div class="text-center optOutOption">
+  <div
+    class="text-center optOutOption"
+    :style="{ display: terms.length != 0 ? 'block' : 'none' }"
+  >
     <h5 class="mt-40">
       Do you want to <span class="optOutSpan">opt out?</span>
     </h5>
@@ -14,10 +17,13 @@
         Opt out for:
 
         <select name="Spring" id="spring" class="spring_dropdown mt-20">
-          <option value="one">Spring 2022</option>
-          <option value="two">Spring 2022</option>
-          <option value="three">Spring 2022</option>
-          <option value="four">Spring 2022</option>
+          <option
+            v-for="(val, i) in terms"
+            :key="i"
+            :value="val.termTitle"
+            v-model="selectedTerm"
+            >{{ val.termTitle }}</option
+          >
         </select>
       </p>
     </div>
@@ -31,29 +37,54 @@
 </template>
 <script>
 // import <import name> from 'import location'
+import { getCookie } from '~/cookies.js'
 
 export default {
   name: 'OptOutOption',
   components: {
     //button
   },
-  props: [],
+  props: {},
 
   data() {
-    return {}
+    return {
+      reqId: '',
+      terms: []
+    }
+  },
+  beforeMount: async function() {
+    var cookie = getCookie('user')
+    var user = JSON.parse(cookie)
+    //console.log(cookie)await
+    this.reqId = user.requestId
+    await this.fetchActiveTerms()
   },
   head() {
     return {
-      title: '',
+      title: ''
     }
   },
   methods: {
     submitOptOutBtn() {
       this.$router.push({
-        name: 'opt-out-success',
+        name: 'opt-out-success'
       })
     },
-  },
+    async fetchActiveTerms() {
+      let params = {
+        requestId: this.reqId
+      }
+
+      await this.$apis.baseService
+        .getActiveTerms(params)
+        .then(async res => {
+          this.terms = res.data.optOutTerms
+        })
+        .catch(err => {
+          console.log(err, 'ActiveTerms ERROR')
+        })
+    }
+  }
 }
 </script>
 <style scoped>

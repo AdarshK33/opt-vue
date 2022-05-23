@@ -64,5 +64,14 @@ export default $axios => ({
       url_suffix: `/getActiveTerms`,
       data: params
     })
+  },
+
+  getStudentOptOutDetails(params) {
+    return $axios({
+      url_instance: optoutInstance,
+      method: 'post',
+      url_suffix: '/getStudentOptOutDetails',
+      data: params
+    })
   }
 })
